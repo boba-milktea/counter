@@ -4,10 +4,28 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./css/index.css" />
-        <title>JS starter</title>
+        <title>Increment & Decrement Counter</title>
     </head>
     <body>
+        <main>
+            <h1>Increment and Decrement Counter</h1>
+            <p>
+                Use the "+" or "−" button to increment or decrement the number.
+                <br />Use reset to reset the number.
+            </p>
+
+            <div class="container">
+                <button class="increment-btn" id="increment">+</button>
+                <input type="text" id="number" readonly />
+                <button class="decrement-btn" id="decrement">−</button>
+            </div>
+            <button class="reset-btn" id="reset">Reset</button>
+        </main>
         <script src="./src/index.js"></script>
     </body>
 </html>
