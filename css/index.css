@@ -6,7 +6,79 @@
     box-sizing: border-box;
 }
 
+:root {
+    --clr-bg: #fff7d1;
+    --clr-btn: #ffecc8;
+    --clr-text: #c96868;
+    --clr-border: #ffd09b;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #565454;
+    font-family: 'Balsamiq Sans', serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--clr-bg);
+}
+
+h1 {
+    text-align: center;
+    color: var(--clr-text);
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+button {
+    padding: 0.8em 1.25em;
+    font-size: 1.5rem;
+    border: none;
+    border: 0.3em solid var(--clr-border);
+    background-color: var(--clr-btn);
+    color: var(--clr-text);
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.increment-btn {
+    border-radius: 0.8em 0 0 0.8em;
+}
+
+.decrement-btn {
+    border-radius: 0 0.8em 0.8em 0;
+}
+
+input {
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--clr-btn);
+    border-top: 0.2em solid var(--clr-border);
+    border-bottom: 0.2em solid var(--clr-border);
+    width: 5em;
+    text-align: center;
+    color: var(--clr-text);
+    font-weight: 800;
+}
+
+input:focus {
+    outline: none;
+}
+
+.reset-btn {
+    border-radius: 0.5em;
+    margin-top: 0.5em;
 }
