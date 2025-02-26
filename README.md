@@ -22,8 +22,8 @@
 
 ## 📋 General Info
 
-This is a simple counter app that allows users to increment, decrement, or reset
-a number.
+This is a basic counter app that enables users to increase, decrease, or reset
+a number. The principle of separation of concerns has been applied.
 
 ---
 
