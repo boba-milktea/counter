@@ -9,6 +9,7 @@
 :root {
     --clr-bg: #fff7d1;
     --clr-btn: #ffecc8;
+    --clr-btn-active: #fff4af;
     --clr-text: #c96868;
     --clr-border: #ffd09b;
 }
@@ -52,6 +53,11 @@ button {
     font-family: inherit;
     cursor: pointer;
     font-weight: 500;
+    transition: 0.2s;
+}
+
+button:active {
+    background-color: var(--clr-btn-active);
 }
 
 .increment-btn {

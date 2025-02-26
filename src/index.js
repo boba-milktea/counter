@@ -1,23 +1,39 @@
-const number = document.getElementById('number');
-const incrementBtn = document.getElementById('increment');
-const decrementBtn = document.getElementById('decrement');
-const resetBtn = document.getElementById('reset');
+// DOM
+const dom = {
+    number: document.getElementById('number'),
+    increment: document.getElementById('increment'),
+    decrement: document.getElementById('decrement'),
+    reset: document.getElementById('reset')
+};
 
-number.value = 0;
+// data
 
-// using increment operator to increase the number
-incrementBtn.addEventListener('click', () => {
-    number.value++;
-});
+const data = {
+    count: 0
+};
 
-// using decrement operator to decrease the number
-decrementBtn.addEventListener('click', () => {
-    number.value--;
-    // the number can't be negative
-    number.value < 0 ? (number.value = 0) : null;
-});
+// updating DOM
+const updateDom = () => {
+    dom.number.value = data.count;
+};
 
-reset.addEventListener('click', () => {
-    // confirm with the user if he/she really want to reset the number
-    confirm('Reset the number?') ? (number.value = 0) : null;
-});
+// handlers
+const handleIncrement = () => {
+    data.count++;
+    updateDom();
+};
+
+const handleDecrement = () => {
+    data.count <= 0 ? (data.count = 0) : data.count--;
+    updateDom();
+};
+
+const handleReset = () => {
+    confirm('Reset the number?') ? (data.count = 0) : null;
+    updateDom();
+};
+
+// events
+dom.increment.addEventListener('click', handleIncrement);
+dom.decrement.addEventListener('click', handleDecrement);
+dom.reset.addEventListener('click', handleReset);
